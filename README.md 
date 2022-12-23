@@ -39,7 +39,10 @@ Clone or copy the project to your local Environment
 
 ## 3 - Run the application code
 
-                python Booktoscrape.py
+                python main.py
+
+
+the output repertory will contain all the datas  
 
 
 
