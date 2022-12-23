@@ -1,0 +1,57 @@
+# OC_Python_P02
+
+The goal of this project is to create a program in Python to collect information 
+about books sold on a website:
+
+    Book to scrape http://books.toscrape.com/
+
+installer python3
+
+Clone or copy the project to your local Environment
+
+
+
+## 1 - Create a Virtual Environment for python
+
+
+        #### Start in the folder project 
+
+                #### create a Virtual Environment
+
+                    python3 -m venv venv
+
+                #### To Activate the Virtual Environment on windows
+
+                    venv\Scripts\activate
+
+                #### To Activate the Virtual Environment on Linux, Unix or MacOS
+
+                    source venv/bin/activate
+
+        #### "(venv)" appears at the prompt
+
+
+## 2 - Load the requirements.txt file to install modules of the project
+
+                python -m pip install -r requirements.txt
+
+
+
+## 3 - Run the application code
+
+                python Booktoscrape.py
+
+
+
+
+
+
+
+
+     
+
+## Help
+
+Virtual Environments and Packages    = https://docs.python.org/3/tutorial/venv.html
+request                              = https://requests.readthedocs.io/en/latest/
+BeautifulSoup                        = https://www.crummy.com/software/BeautifulSoup/bs4/doc/

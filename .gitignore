@@ -1,0 +1,4 @@
+*_ignore*
+__pycache__
+venv/
+output/
