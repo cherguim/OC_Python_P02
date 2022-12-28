@@ -3,3 +3,5 @@ GitHub_link.txt
 __pycache__
 venv/
 output/
+*.pyc
+

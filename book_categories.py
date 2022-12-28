@@ -2,25 +2,17 @@ import requests
 from bs4 import BeautifulSoup
 
 
-def book_categories (url_base):
-                
-    categories_names = []  
-    categories_links = []
-
-    response=requests.get(url_base)
-    if response.ok:
-        
+def book_categories (url):              
+    cats = []
+    response=requests.get(url)
+    if response.ok:  
         soup= BeautifulSoup(response.content, 'html.parser')
-    
-        category_block = soup.select(".nav-list > li > ul > li ")
-
-        for i in range(len(category_block)):
-            categories_names.append (category_block[i].select_one("a").text.strip().replace(' ', '_'))
-            categories_links.append (url_base + category_block[i].a['href'].replace("../", ""))
-        
-          
-    return categories_names, categories_links      
-    
+        cat_block = soup.select(".nav-list > li > ul > li ")
+        for i in range(len(cat_block)):
+            names = (cat_block[i].select_one("a").text.strip().replace(' ', '_'))
+            links = (url + cat_block[i].a['href'].replace("../", ""))
+            cats.append([names,links])
+    return cats     
 
 
     
