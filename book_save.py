@@ -17,6 +17,6 @@ def book_save(csv_file, rows):
                     urlretrieve(row[9], img_dir + row[1] + '.jpg')
                 print('Save to file        ', row[7] ,'            ', row[2])
             nb+=1
-        print('\n' + str(nb-1) ,' BOOKS SUCCESSFULLY IMPORTED IN: ',csv_file, '\n' )
+        print('\n' + str(nb-1) ,'BOOKS WRITTEN WITH SUCCESS IN THIS FILE:','"',csv_file,'"', '\n' )
 
 
