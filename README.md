@@ -49,16 +49,6 @@ install python3 and clone or copy the project to your local Environment
 
 
 
-### This program permit to :
-- data scapping of one book
-- data scapping a category of books
-- Data scapping all category of books
-
-##### The "output" folder will contain all data scrapped from the books into CSV files.
-
-
-
-
 ## Help
 
 Virtual Environments and Packages    = https://docs.python.org/3/tutorial/venv.html

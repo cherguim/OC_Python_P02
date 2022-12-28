@@ -41,10 +41,7 @@ def scrape_one_category():
                 rows = book_infos(links)
                 book_save('output/' + rows[1][7] + '.csv', rows)
                 break
-            
-
-
-                
+               
 
 def scrape_all_categories ():
     cats = book_categories (url_base)
@@ -52,6 +49,11 @@ def scrape_all_categories ():
         links = books_links (cat[1])
         rows = book_infos(links)
         book_save('output/' + rows[1][7] + '.csv', rows)  
+
+def lstr_80(txt,nb):
+    if (len(txt))>nb:
+        txt = (txt[:nb]+' ...')
+    return txt
 
 def clear_os():
     if platform.system() == "Windows":
@@ -71,7 +73,7 @@ while True:
     print()
 
     if answer == '1':
-        print('Please enter the url to scrape data for a single book')
+        print('Please enter the url to scrape data for a single book:')
         answer = input('-> ')
         scrape_one_book(answer)
         input('\nPress a key to continue. ')
