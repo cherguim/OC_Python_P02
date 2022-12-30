@@ -8,9 +8,11 @@ url_base = 'http://books.toscrape.com/'
 save_base = 'output'
 book_csv = save_base + '/_scrape_one_book.csv'
 
+
 def scrape_one_book(url):
     if url.find(url_base) !=-1:
         response=requests.get(url)
+        # network connection error:
         # socket.gaierror: [Errno 8] nodename nor servname provided, or not know
         if response.ok:
             if response.text.find('class="product_page"') !=-1:
@@ -27,7 +29,7 @@ def scrape_one_book(url):
 def scrape_one_category():
     cats = book_categories(url_base)
     while True:
-        clear_os()
+        clear_screen()
         i=0
         for name, link in cats:
             i +=1
@@ -50,19 +52,22 @@ def scrape_all_categories ():
         rows = book_infos(links)
         book_save('output/' + rows[1][7] + '.csv', rows)  
 
+
 def lstr_80(txt,nb):
     if (len(txt))>nb:
         txt = (txt[:nb]+' ...')
     return txt
 
-def clear_os():
+
+def clear_screen():
     if platform.system() == "Windows":
         os.system("cls")
     elif platform.system() == "Darwin" or "Linux":
         os.system("clear")
 
+
 while True:
-    clear_os()
+    clear_screen()
     print('Data scraping of "http://books.toscrape.com" web site\n')
     print('1 - Data scraping for only one book')
     print('2 - Data scraping for one category of books')

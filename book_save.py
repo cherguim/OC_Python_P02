@@ -21,4 +21,3 @@ def book_save(csv_file, rows):
             nb+=1
         print('\n' + str(nb-1) ,'book(s) writeen with success in this file:','"',csv_file,'"', '\n' )
 
-
