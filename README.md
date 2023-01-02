@@ -6,11 +6,11 @@ about books sold on a website:
 Book to scrape http://books.toscrape.com/
 
 ### This program permit to :
-- data scapping of one book
-- data scapping a category of books
-- Data scapping all category of books
+- data scraping of one book
+- data scraping a category of books
+- Data scraping all category of books
 
-##### The "output" folder will contain all data scrapped from the books into CSV files.
+##### The "output" folder will contain all data scraped from the books into CSV files.
 
 
 install python3 and clone or copy the project to your local Environment
